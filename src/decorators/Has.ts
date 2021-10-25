@@ -317,7 +317,7 @@ export namespace Has
                     if (this[label] === undefined)
                     {
                         if (primaryField === null)
-                            primaryField = getPrimaryField(`Has.${relation.name}`, targetGen());
+                            primaryField = getPrimaryField(`Has.${relation.name}`, this.constructor);
 
                         this[label] = accessorGen(this, primaryField, getter, inverse)
                     }
